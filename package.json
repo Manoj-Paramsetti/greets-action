@@ -1,0 +1,23 @@
+{
+  "name": "greets-action",
+  "version": "1.0.0",
+  "description": "Greets and sets label for issues and pull requests",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Manoj-Paramsetti/greets-action.git"
+  },
+  "author": "Manoj-Paramsetti",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Manoj-Paramsetti/greets-action/issues"
+  },
+  "homepage": "https://github.com/Manoj-Paramsetti/greets-action#readme",
+  "dependencies": {
+    "@actions/core": "^1.2.7",
+    "@actions/github": "^4.0.0"
+  }
+}

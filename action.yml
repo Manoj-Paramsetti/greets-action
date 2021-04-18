@@ -1,0 +1,48 @@
+name: 'Greets Action'
+description: 'Greets the issue/pull request and label adder'
+author: 'Manoj-Paramsetti'
+inputs:
+  GITHUB_TOKEN:
+    description: 'Github token'
+    required: true
+
+  issue_message:
+    description: 'issue message to be posted'
+    required: true
+  
+  label_1:
+    description: "label to be added"
+    required: false
+    default: 'value_is_not_given_action'
+  
+  label_2:
+    description: "label to be added"
+    required: false
+    default: 'value_is_not_given_action'
+  
+  label_3:
+    description: "label to be added"
+    required: false
+    default: 'value_is_not_given_action'
+ 
+  label_4:
+    description: "label to be added"
+    required: false
+    default: 'value_is_not_given_action'
+
+  label_5:
+    description: "label to be added"
+    required: false
+    default: 'value_is_not_given_action'
+
+  pr_message:
+    description: 'PR message to be posted'
+    required: true
+
+runs:
+  using: 'node12'
+  main: 'dist/index.js'
+
+branding:
+  color: 'orange'
+  icon: 'award'
