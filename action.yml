@@ -47,5 +47,5 @@ runs:
   main: 'dist/index.js'
 
 branding:
-  color: 'orange'
-  icon: 'award'
+  icon: hash  
+  color: blue
