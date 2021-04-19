@@ -78,7 +78,7 @@ jobs:
           issue_message: 'add message over here for issue'
           pr_message: 'add message over here for pull request'
           # labels is not a required key. you can use it when you want to add labels. it supports
-          # upto 4 labels
+          # more than 4 labels
           labels: '["label_1", "label_2", "label_3"]' 
           
 ```
