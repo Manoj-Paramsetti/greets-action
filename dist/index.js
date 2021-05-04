@@ -76,7 +76,7 @@ const runner = async () => {
         if (github.context.eventName === 'pull_request') {
             // Adds comment in PR
             octoKit.issues.createComment({
-                issue_number: context.pull_request.number,
+                issue_number: context.payload.pull_request.number,
                 owner: context.repo.owner,
                 repo: context.repo.repo,
                 body: pr_message,
