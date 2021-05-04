@@ -81,6 +81,17 @@ const runner = async () => {
                 repo: context.repo.repo,
                 body: pr_message,
             });
+         
+            // adds label if labels list contains something
+            if(labels.length != 0){
+                // Adds Label to an issue or pull request
+                octoKit.issues.addLabels({
+                    issue_number: context.payload.pull_request.number,
+                    owner: context.repo.owner,
+                    repo: context.repo.repo,
+                    labels: labels,
+            });
+             
         } 
         
         else if (github.context.eventName === 'issues') {
@@ -91,18 +102,20 @@ const runner = async () => {
                 repo: context.repo.repo,
                 body: issue_message,
             });
+            
+            // adds label if labels list contains something
+            if(labels.length != 0){
+                // Adds Label to an issue or pull request
+                octoKit.issues.addLabels({
+                    issue_number: context.issue.number,
+                    owner: context.repo.owner,
+                    repo: context.repo.repo,
+                    labels: labels,
+            });
+             
+        }
         }
         
-        // adds label if labels list contains something
-        if(labels.length != 0){
-            // Adds Label to an issue or pull request
-            octoKit.issues.addLabels({
-                issue_number: context.issue.number,
-                owner: context.repo.owner,
-                repo: context.repo.repo,
-                labels: labels,
-            });       
-        }
     }catch(error){
         core.setFailed(error.message);
     }
