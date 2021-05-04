@@ -90,8 +90,8 @@ const runner = async () => {
                     owner: context.repo.owner,
                     repo: context.repo.repo,
                     labels: labels,
-            });
-             
+                });
+            }    
         } 
         
         else if (github.context.eventName === 'issues') {
@@ -111,9 +111,9 @@ const runner = async () => {
                     owner: context.repo.owner,
                     repo: context.repo.repo,
                     labels: labels,
-            });
+                });
              
-        }
+            }
         }
         
     }catch(error){
